@@ -210,9 +210,13 @@ func commandHelp(config *Config, cache *pokecache.Cache, name string) error {
 
 	fmt.Println("help: Displays a help message")
 	fmt.Println("exit: Exit the Pokedex")
+	fmt.Println("map: Show next 20 locations")
+	fmt.Println("mapg: Show previous 20 locations")
+	fmt.Println("explore <location-name>: Explore a specific location")
+	fmt.Println("catch <pokemon-name>: Attempt to catch a Pokemon")
+	fmt.Println("pokedex: View your caught Pokemon")
 	return nil
 }
-
 func commandMap(config *Config, cache *pokecache.Cache, name string) error {
 	if config.Next == "" {
 		return fmt.Errorf("no next URL provided")
